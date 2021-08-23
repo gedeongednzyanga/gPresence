@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EleveInscrits" targetNamespace="http://tempuri.org/EleveInscrits.xsd" xmlns:mstns="http://tempuri.org/EleveInscrits.xsd" xmlns="http://tempuri.org/EleveInscrits.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="g_presenceConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="g_presenceConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Grendezvous.Properties.Settings.GlobalReference.Default.g_presenceConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_eleveTableAdapter" GeneratorDataComponentClassName="view_eleveTableAdapter" Name="view_eleve" UserDataComponentName="view_eleveTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="g_presenceConnectionString (Settings)" DbObjectName="g_presence.dbo.view_eleve" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_eleve, nom, postnom, prenom, sexe, id_classe, designation_cl, date_inscri FROM dbo.view_eleve</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_eleve" DataSetColumn="id_eleve" />
+              <Mapping SourceColumn="nom" DataSetColumn="nom" />
+              <Mapping SourceColumn="postnom" DataSetColumn="postnom" />
+              <Mapping SourceColumn="prenom" DataSetColumn="prenom" />
+              <Mapping SourceColumn="sexe" DataSetColumn="sexe" />
+              <Mapping SourceColumn="id_classe" DataSetColumn="id_classe" />
+              <Mapping SourceColumn="designation_cl" DataSetColumn="designation_cl" />
+              <Mapping SourceColumn="date_inscri" DataSetColumn="date_inscri" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EleveInscrits" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EleveInscrits" msprop:Generator_UserDSName="EleveInscrits">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_eleve" msprop:Generator_TableClassName="view_eleveDataTable" msprop:Generator_TableVarName="tableview_eleve" msprop:Generator_TablePropName="view_eleve" msprop:Generator_RowDeletingName="view_eleveRowDeleting" msprop:Generator_RowChangingName="view_eleveRowChanging" msprop:Generator_RowEvHandlerName="view_eleveRowChangeEventHandler" msprop:Generator_RowDeletedName="view_eleveRowDeleted" msprop:Generator_UserTableName="view_eleve" msprop:Generator_RowChangedName="view_eleveRowChanged" msprop:Generator_RowEvArgName="view_eleveRowChangeEvent" msprop:Generator_RowClassName="view_eleveRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_eleve" msprop:Generator_ColumnVarNameInTable="columnid_eleve" msprop:Generator_ColumnPropNameInRow="id_eleve" msprop:Generator_ColumnPropNameInTable="id_eleveColumn" msprop:Generator_UserColumnName="id_eleve" type="xs:int" />
+              <xs:element name="nom" msprop:Generator_ColumnVarNameInTable="columnnom" msprop:Generator_ColumnPropNameInRow="nom" msprop:Generator_ColumnPropNameInTable="nomColumn" msprop:Generator_UserColumnName="nom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="postnom" msprop:Generator_ColumnVarNameInTable="columnpostnom" msprop:Generator_ColumnPropNameInRow="postnom" msprop:Generator_ColumnPropNameInTable="postnomColumn" msprop:Generator_UserColumnName="postnom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prenom" msprop:Generator_ColumnVarNameInTable="columnprenom" msprop:Generator_ColumnPropNameInRow="prenom" msprop:Generator_ColumnPropNameInTable="prenomColumn" msprop:Generator_UserColumnName="prenom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sexe" msprop:Generator_ColumnVarNameInTable="columnsexe" msprop:Generator_ColumnPropNameInRow="sexe" msprop:Generator_ColumnPropNameInTable="sexeColumn" msprop:Generator_UserColumnName="sexe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_classe" msprop:Generator_ColumnVarNameInTable="columnid_classe" msprop:Generator_ColumnPropNameInRow="id_classe" msprop:Generator_ColumnPropNameInTable="id_classeColumn" msprop:Generator_UserColumnName="id_classe" type="xs:int" />
+              <xs:element name="designation_cl" msprop:Generator_ColumnVarNameInTable="columndesignation_cl" msprop:Generator_ColumnPropNameInRow="designation_cl" msprop:Generator_ColumnPropNameInTable="designation_clColumn" msprop:Generator_UserColumnName="designation_cl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_inscri" msprop:Generator_ColumnVarNameInTable="columndate_inscri" msprop:Generator_ColumnPropNameInRow="date_inscri" msprop:Generator_ColumnPropNameInTable="date_inscriColumn" msprop:Generator_UserColumnName="date_inscri" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

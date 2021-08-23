@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ElevePresence" targetNamespace="http://tempuri.org/ElevePresence.xsd" xmlns:mstns="http://tempuri.org/ElevePresence.xsd" xmlns="http://tempuri.org/ElevePresence.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="g_presenceConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="g_presenceConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Grendezvous.Properties.Settings.GlobalReference.Default.g_presenceConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_presenceTableAdapter" GeneratorDataComponentClassName="view_presenceTableAdapter" Name="view_presence" UserDataComponentName="view_presenceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="g_presenceConnectionString (Settings)" DbObjectName="g_presence.dbo.view_presence" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id_presence, id_eleve, nom, postnom, prenom, sexe, date_inscri, designation_cl, date_presence, presence, presence_ltr
+FROM            view_presence</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_presence" DataSetColumn="id_presence" />
+              <Mapping SourceColumn="id_eleve" DataSetColumn="id_eleve" />
+              <Mapping SourceColumn="nom" DataSetColumn="nom" />
+              <Mapping SourceColumn="postnom" DataSetColumn="postnom" />
+              <Mapping SourceColumn="prenom" DataSetColumn="prenom" />
+              <Mapping SourceColumn="sexe" DataSetColumn="sexe" />
+              <Mapping SourceColumn="date_inscri" DataSetColumn="date_inscri" />
+              <Mapping SourceColumn="designation_cl" DataSetColumn="designation_cl" />
+              <Mapping SourceColumn="date_presence" DataSetColumn="date_presence" />
+              <Mapping SourceColumn="presence" DataSetColumn="presence" />
+              <Mapping SourceColumn="presence_ltr" DataSetColumn="presence_ltr" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ElevePresence" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ElevePresence" msprop:Generator_UserDSName="ElevePresence">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_presence" msprop:Generator_TableClassName="view_presenceDataTable" msprop:Generator_TableVarName="tableview_presence" msprop:Generator_TablePropName="view_presence" msprop:Generator_RowDeletingName="view_presenceRowDeleting" msprop:Generator_RowChangingName="view_presenceRowChanging" msprop:Generator_RowEvHandlerName="view_presenceRowChangeEventHandler" msprop:Generator_RowDeletedName="view_presenceRowDeleted" msprop:Generator_UserTableName="view_presence" msprop:Generator_RowChangedName="view_presenceRowChanged" msprop:Generator_RowEvArgName="view_presenceRowChangeEvent" msprop:Generator_RowClassName="view_presenceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_presence" msprop:Generator_ColumnVarNameInTable="columnid_presence" msprop:Generator_ColumnPropNameInRow="id_presence" msprop:Generator_ColumnPropNameInTable="id_presenceColumn" msprop:Generator_UserColumnName="id_presence" type="xs:int" />
+              <xs:element name="id_eleve" msprop:Generator_ColumnVarNameInTable="columnid_eleve" msprop:Generator_ColumnPropNameInRow="id_eleve" msprop:Generator_ColumnPropNameInTable="id_eleveColumn" msprop:Generator_UserColumnName="id_eleve" type="xs:int" />
+              <xs:element name="nom" msprop:Generator_ColumnVarNameInTable="columnnom" msprop:Generator_ColumnPropNameInRow="nom" msprop:Generator_ColumnPropNameInTable="nomColumn" msprop:Generator_UserColumnName="nom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="postnom" msprop:Generator_ColumnVarNameInTable="columnpostnom" msprop:Generator_ColumnPropNameInRow="postnom" msprop:Generator_ColumnPropNameInTable="postnomColumn" msprop:Generator_UserColumnName="postnom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prenom" msprop:Generator_ColumnVarNameInTable="columnprenom" msprop:Generator_ColumnPropNameInRow="prenom" msprop:Generator_ColumnPropNameInTable="prenomColumn" msprop:Generator_UserColumnName="prenom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sexe" msprop:Generator_ColumnVarNameInTable="columnsexe" msprop:Generator_ColumnPropNameInRow="sexe" msprop:Generator_ColumnPropNameInTable="sexeColumn" msprop:Generator_UserColumnName="sexe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_inscri" msprop:Generator_ColumnVarNameInTable="columndate_inscri" msprop:Generator_ColumnPropNameInRow="date_inscri" msprop:Generator_ColumnPropNameInTable="date_inscriColumn" msprop:Generator_UserColumnName="date_inscri" type="xs:dateTime" />
+              <xs:element name="designation_cl" msprop:Generator_ColumnVarNameInTable="columndesignation_cl" msprop:Generator_ColumnPropNameInRow="designation_cl" msprop:Generator_ColumnPropNameInTable="designation_clColumn" msprop:Generator_UserColumnName="designation_cl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_presence" msprop:Generator_ColumnVarNameInTable="columndate_presence" msprop:Generator_ColumnPropNameInRow="date_presence" msprop:Generator_ColumnPropNameInTable="date_presenceColumn" msprop:Generator_UserColumnName="date_presence" type="xs:dateTime" />
+              <xs:element name="presence" msprop:Generator_ColumnVarNameInTable="columnpresence" msprop:Generator_ColumnPropNameInRow="presence" msprop:Generator_ColumnPropNameInTable="presenceColumn" msprop:Generator_UserColumnName="presence" type="xs:int" minOccurs="0" />
+              <xs:element name="presence_ltr" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnpresence_ltr" msprop:Generator_ColumnPropNameInRow="presence_ltr" msprop:Generator_ColumnPropNameInTable="presence_ltrColumn" msprop:Generator_UserColumnName="presence_ltr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
